@@ -1,0 +1,284 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=NavyBlue,
+    urlcolor=NavyBlue,
+    breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{gobble} % suppresses page numbering. To stop suppression, change to 'arabic'.
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+% DEFINITIONS FOR CV - defining some features to simplify template
+
+\newenvironment{changemargin}[2]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{#1}
+    \setlength{\rightmargin}{#2}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\
+      {#2} \\  {#3} \\ {#4} \\ {#5}
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\labdescription}[1]{
+	\begin{changemargin}{0.15in}{0.15in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newcommand{\labtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newcommand{\presentation}[2]{
+	{#1} \hfill \emph{#2}\\ \bigskip
+}
+
+\newcommand{\award}[2]{
+	{#1} \hfill \emph{#2}\\ \medskip
+}
+
+\newcommand{\society}[2]{
+	{#1} \hfill \emph{#2}\\ \medskip
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }
+	{\end{changemargin}
+}
+
+% END CV DEFINITIONS
+
+\begin{document}
+
+%%%% Name %%%%
+
+\contact{Jeongwhan Choi}{\href{mailto:email@address.com}{jeongwhan.choi@jbnu.ac.kr}}{+82 1036961205}{22, Nonhyeon-ro 159-gil, Gangnam-gu}{Seoul, Republic of Korea}
+
+%%%% Education %%%%
+
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Bachelor, Software Engineering} \hfill \emph{Mar 2016 - present} \\
+	\emph{Chonbuk National University}, Jeonju Si, Jeollabuk Do, Republic of Korea \\
+	
+	\vspace{14pt}
+	\textbf{Nanodegree, Machine Learning Engineering} \hfill \emph{Jul 2017 - Feb 2018} \\
+	\emph{Udacity} \\
+	
+	\vspace{14pt}
+	\textbf{Nanodegree, Self-Driving Car Engineering} \hfill \emph{Mar 2018 - Present} \\
+	\emph{Udacity} \\
+
+	\vspace{14pt}
+	\textbf{Machine Learning} \hfill \emph{Jun 2017 - Jan 2018} \\
+	\emph{Coursera} \\
+	
+	\vspace{14pt}
+	\textbf{IBM Blockchain Foundation for Developers Learning} \hfill \emph{Feb 2018} \\
+	\emph{Coursera} \\
+
+
+\end{body}
+
+\medskip
+
+
+%%%% Skills %%%%
+
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+
+%% Tools & Technologies %%
+  	\labtitle{Tools \& Technologies}{}{}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item JAVA, Python, C/C++, JAVA, R, LaTeX
+      \item Matlab, Android, Eclipse, IntelliJ, PyCharm, Jupyter Notebook, Git
+      \item MySQL, Tomcat, JSP, HTML, Javascript, CSS
+  	\end{itemize}
+  }
+  
+  %% Industry Knowledge. %%
+  	\labtitle{Industry Knowledge}{}{}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Machine Learning, Deep Learning, Artificial Intelligence
+      \item Computer Vision
+      \item Software Engineering, Object Oriented Programming
+  	\end{itemize}
+  }
+
+\end{body}
+
+\medskip
+
+%%%% Publication %%%%
+
+\header{Publication}
+
+\begin{body}
+	\vspace{14pt}
+
+\presentation{Iceberg-Ship Classification in SAR Images Using Convolutional Neural Network with Transfer Learning.\\ \emph{JICS(Journal of Internet Computing and Services)}, 19 (4), 35-44.}{Sep 2018}
+
+\end{body}
+
+\medskip
+
+%%%% Honors & Awards %%%%
+
+\header{Honors \& Awards}
+
+\begin{body}
+	\vspace{14pt}
+
+\award{The National Scholarship for Science and Engineering}{2018-2019}
+\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item  KOSAF(Korea Student Aid Foundation)
+      \item This is the type of merit-based aid for four semesters
+      \item This scholarship supports undergraduates with strong academic performance in science and engineering, with the purpose of developing future leaders in those fields.
+  	\end{itemize}
+	
+	\award{Academic Excellent Scholarship}{2016-2018}
+\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item  Chonbuk National University
+      \item Receive a scholarship for the best grade during the four semesters.
+  	\end{itemize}
+
+\end{body}
+
+
+\medskip
+
+\pagebreak 
+
+%%%% Volunteer Experience %%%%
+
+\header{Volunteer Experience}
+
+\begin{body}
+	\vspace{14pt}
+
+%% GitHub %%
+  	\labtitle{Contributor}{GitHub}{Jul 2017 - Present}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Open Source Project Contributor
+  	\end{itemize}
+  }
+  
+  %% GitLab Inc. %%
+  	\labtitle{Translator}{GitLab Inc.}{Oct 2018 - Present}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item Contribute translations to GitLab using Crowdin
+      \item Update the glossary
+  	\end{itemize}
+  }
+
+\end{body}
+
+\medskip
+
+%%%% Certifications %%%%
+
+\header{Certifications}
+
+\begin{body}
+	\vspace{14pt}
+
+%% Machine Learning%%
+  	\labtitle{Machine Learning}{Coursera}{July 2017 - Present}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item License EEYYGQPCFLN7
+  	\end{itemize}
+  }
+  
+  %% Machine Learning Engineer Nanodegree %%
+  	\labtitle{Machine Learning Engineer Nanodegree}{Udacity}{Jan 2018 - Present}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  	\end{itemize}
+  }
+  
+  %% IBM Blockchain Foundation for Developers  %%
+  	\labtitle{IBM Blockchain Foundation for Developers }{Coursera}{Feb 2018 - Present}
+  \labdescription {
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+      \item License 5MMQUBFWE2K3
+  	\end{itemize}
+  }
+
+\end{body}
+
+\medskip
+
+%%%% Professional Societies %%%%
+
+\header{Professional Societies}
+
+\begin{body}
+	\vspace{14pt}
+
+\society{KSII(Korean Society for Internet Information)}{2018 - Present}
+
+\end{body}
+
+\end{document}
+
+
