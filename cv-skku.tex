@@ -22,6 +22,8 @@
 % \setCJKmonofont{Noto Sans Mono CJK KR}
 % \usepackage{CJKutf8}
 
+\usepackage{graphicx} 
+
 \usepackage[]{fancyhdr}
 \hypersetup{
     colorlinks=true,
@@ -154,42 +156,45 @@
 % }
 
 %%%% Name %%%%
-\rightline{\footnotesize{Last updated on \today}}
+% \rightline{\footnotesize{Last updated on \today}}
+% \vspace{10pt}
+
+% \contact{Jeongwhan Choi}{\href{mailto:jeongwhan.choi@kaist.ac.kr}{jeongwhan.choi@kaist.ac.kr}}{\href{https://jeongwhanchoi.com}{Homepage Link}}{\href{https://scholar.google.com/citations?user=3MNElkYAAAAJ&hl=en}{Google Scholar Link}}
+
+% Name + contact on left, photo placeholder on right
+\begin{minipage}[t]{0.72\textwidth}
+  \vspace{0pt}
+  {\Large \scshape Jeongwhan Choi (최정환)}\\[4pt]
+  \href{mailto:jeongwhan.choi@kaist.ac.kr}{jeongwhan.choi@kaist.ac.kr}\\
+  \href{https://jeongwhanchoi.com}{https://jeongwhanchoi.com}\\
+  \href{https://scholar.google.com/citations?user=3MNElkYAAAAJ&hl=en}{Google Scholar}
+\end{minipage}%
+\begin{minipage}[t]{0.28\textwidth}
+  \vspace{0pt}
+  \raggedleft
+  \includegraphics[width=3.6cm, height=2.6cm, keepaspectratio]{profile.jpg}
+\end{minipage}
+
 \vspace{10pt}
 
-\contact{Jeongwhan Choi}{\href{mailto:jeongwhan.choi@kaist.ac.kr}{jeongwhan.choi@kaist.ac.kr}}{\href{https://jeongwhanchoi.com}{Homepage Link}}{\href{https://scholar.google.com/citations?user=3MNElkYAAAAJ&hl=en}{Google Scholar Link}}
-
 %%%% Bio %%%%
-% \header{Introduction}
-% \begin{body}
-%     \vspace{14pt}
-%     I am currently a Ph.D. student at Yonsei University. I relocated to KAIST in February 2024 to continue my research with my advisor, Prof. Noseong Park, and currently I am staying at KAIST. My research interests span a variety of areas, including graph neural networks, recommender systems, spatio-temporal forecasting, and differential equations. I have developed graph-based deep learning methods inspired by differential equations in natural science, such as heat diffusion and reaction-diffusion equations. Recently, my focus on research has been extending the self-attention mechanism, the heart of Transformers, into the concept of graph signal processing.
-% \end{body}
+\header{Research Profile}
+\begin{body}
+    \vspace{14pt}
+    \; I am a Jang Young-Sil Postdoctoral Fellow (Excellence Track) at the Information \& Electronics Research Institute, KAIST, working with \href{https://scholar.google.com/citations?user=VSuM3gYAAAAJ&hl=en}{Noseong Park}. I received my Ph.D.\ in Artificial Intelligence from Yonsei University in August 2025, co-advised by \href{https://scholar.google.com/citations?user=VSuM3gYAAAAJ&hl=en}{Noseong Park} and \href{https://scholar.google.com/citations?user=px5LGgMAAAAJ&hl=en}{Sung-Bae Cho}. My research focuses on principled deep learning on graphs, addressing fundamental challenges such as over-smoothing and over-squashing. I work at the intersection of graph neural networks, differential equations, and Transformers with applications spanning recommender systems, spatiotemporal forecasting, and scientific machine learning.
+    % My most recent work, \href{https://openreview.net/forum?id=FmxRzlu0rT}{NodePFN} (ICLR 2026), introduces the first Prior-Fitted Network for node classification built on synthetic graph priors. 
+    % This work is actively expanding in two directions: (1) \textbf{Multimodal AI}, where I plan to build unified frameworks integrating structured graph data, tabular data, and natural language, and (2) \textbf{Physical AI}, leveraging physics-informed inductive biases and physics-based priors for simulation-ready architectures (e.g., \href{https://openreview.net/forum?id=tJTtzKrzxK}{PIORF}, ICLR 2025; \href{https://arxiv.org/abs/2312.12467}{HCMT}, ICLR 2024),
 
-% \medskip
-% %%%% Research Interest %%%%
-
-% \header{Research Interest}
-
-% \begin{body}
-%     \vspace{14pt}
-%     \begin{itemize}
-%         \item Artificial Intelligence
-%         \begin{itemize}
-%             \item Graph Neural Networks
-%             \item Recommendation (Collaborative Filtering and Sequential Recommendation)
-%             \item Spatiotemporal Forecasting
-%             \item Differential Equation-based Deep Learning
-%             \item Transformers
-%         \end{itemize}
-%         \item Software Engineering
-%         \begin{itemize}
-%             \item Software Defect Prediction
-%             \item AI-based Software Analytics
-%         \end{itemize}
-%     \end{itemize}
-% \end{body}
-% \medskip
+    \; A core thread of my work reinterprets deep architectures through \textbf{signal processing and dynamical systems}: \href{https://dl.acm.org/doi/10.1145/3539618.3591645}{BSPM} (SIGIR 2023), \href{https://ojs.aaai.org/index.php/AAAI/article/view/28747}{BSARec} (AAAI 2024), and \href{https://openreview.net/forum?id=ffNrpcBpi6}{GFSA} (NeurIPS 2024) recast collaborative filtering, self-attention, and Transformers through graph signal processing and spectral filtering; \href{https://ojs.aaai.org/index.php/AAAI/article/view/20587}{STG-NCDE} (AAAI 2022 Oral) --- ranked \href{https://www.paperdigest.org/2025/03/most-influential-aaai-papers-2025-03-version/}{13th among the most influential AAAI 2022 papers} with nearly 500 citations --- and \href{https://proceedings.mlr.press/v202/choi23a.html}{GREAD} (ICML 2023) embed neural controlled differential equations and reaction–diffusion dynamics into spatiotemporal and graph learning. 
+    
+    \; In \textbf{Physical AI}, I develop AI architectures for simulation: \href{https://openreview.net/forum?id=tJTtzKrzxK}{PIORF} (ICLR 2025) for mesh-based PDE simulation, and \href{https://openreview.net/forum?id=90yw2uM6J5}{HCMT} (ICLR 2024) for long-range physical interactions in computational fluid dynamics --- with direct applicability to engineering simulation and control.
+    
+    
+    % \; My most influential work, STG-NCDE (AAAI 2022 Oral), introduced neural controlled differential equations to spatiotemporal graphs and is ranked \href{https://www.paperdigest.org/2025/03/most-influential-aaai-papers-2025-03-version/}{13th among the most influential AAAI 2022 papers} with nearly 500 citations. 
+    My work has appeared at top-tier venues including ICML, NeurIPS, ICLR, AAAI, IJCAI, SIGIR, WSDM, and CIKM, with two oral presentations at AAAI (2022, 2026). 
+    I received the \href{https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-south-korea}{Qualcomm Innovation Fellowship (2024)}, \href{https://www.jeongwhanchoi.com/assets/award/KAIST-SAMSUNG-BESTPAPER-RUNNERUP.pdf}{the Best Paper Runner-up Award} from \href{https://research.kaist.ac.kr/page/ko/selectPage.do?menuSeq=3605&pageSeq=3685}{KAIST–Samsung Industry-Academic Collaboration}, and was selected for the Jang Young Sil Fellow Program (Excellence Track) at KAIST. I was recognized as a Top Reviewer at NeurIPS 2024, LoG 2024, and KDD 2025 (both cycles), and served as Web Chair for CIKM 2025 and Website Chair for LoG 2025. I am now serving as \textbf{General Chair} for LoG 2026.
+\end{body}
+\medskip
 
 %%%% Work Experience %%%%
 \header{Research Experience}
@@ -238,11 +243,13 @@
 	\emph{B.S. in Software Engineering}\\
 	\begin{itemize} \itemsep -0pt  % reduce space between items
     \item GPA: 3.98/4.5 (\href{https://www.jeongwhanchoi.com/assets/award/JBNU_outstanding_undergraduate.pdf}{Presidential Award for Outstanding Undergraduate})
+ %        \item \textit{magna cum laude}
 	\end{itemize}
 \end{body}
 
 \medskip
 
+\clearpage
 
 %%%% Publication %%%%
 
@@ -278,7 +285,6 @@
 \textsc{Conference Papers}
 \lineover
 \begin{enumerate}
-    \item Woosung Kang, Jiwon Jeong, Jonghyeok Shin, \textbu{Jeongwhan Choi}, Noseong Park, ``One Sequential Recommendation Model Pretrained from Synthetic Priors Predicts Multiple Datasets'', ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), 2026. [\RED{Acceptance Rate 18.5\%}]
     \item \textbu{Jeongwhan Choi}*, Jongwoo Kim*, Woosung Kang, Noseong Park, ``Learning Posterior Predictive Distributions for Node Classification from Synthetic Graph Priors'', International Conference on Learning Representations (ICLR), 2026. [\href{https://openreview.net/forum?id=qkBBHixPow}{OpenReview}]
     \item \textbu{Jeongwhan Choi}, Seungjun Park, Sumin Park, Sung-Bae Cho, Noseong Park ``Are Graph Transformers Necessary? Efficient Long-Range Message Passing with Fractal Nodes in MPNNs'', AAAI Conference on Artificial Intelligence (\textit{AAAI}), 2026. [\RED{Oral Presentation}][\RED{Acceptance Rate 17.6\% (4,167/23,680)}][\href{https://ojs.aaai.org/index.php/AAAI/article/view/39191}{Paper}]
     \item Seonkyu Lim*, \textbu{Jeongwhan Choi}*, and Jaehoon Lee*, "FraudCenGCL: Role-Aware Graph Contrastive Learning for Low-Homophily Fraud Detection",  In IEEE International Conference on Big Data (Big Data), 2025.
@@ -319,7 +325,7 @@
 \begin{enumerate}
     \item Yeon Uk Jeong, \textbf{Jeongwhan Choi}, Noseong Park, Jae Yong Ryu, and Yi Rang Kim, ``Predicting Drug-Drug Interactions: A Deep Learning Approach with GCN-Based Collaborative Filtering'', Artificial Intelligence in Medicine, 2025. [\RED{IF 6.1}] [\href{https://doi.org/10.1016/j.artmed.2025.103185}{Paper}]
     \item Taeyang Lee, \textbf{Jeongwhan Choi}, Inyeob Na, Insun Yoo, Sungil Woo, Kwang Jong Kim, Mikyung Park, Joonghwan Yang, Jeongguk Min, Seokwoo Lee, Noseong Park, Joonyoung Yang,``Graph-Based Representation Approach for Deep Learning of Organic Light-Emitting Diode Devices'', Advanced Intelligent System, 2024. [\RED{IF=6.8}][\href{https://onlinelibrary.wiley.com/doi/10.1002/aisy.202400598}{Paper}]
-    \item \textbu{Jeongwhan Choi} and Noseong Park, ``Graph Neural Rough Differential Equations for Traffic Forecasting'', \emph{ACM Transactions on Intelligent Systems and Technology (TIST)}, 2023. [\href{https://dl.acm.org/doi/abs/10.1145/3604808}{Paper}][\RED{IF=10.489}]
+    \item \textbu{Jeongwhan Choi} and Noseong Park, ``Graph Neural Rough Differential Equations for Traffic Forecasting'', \emph{ACM Transactions on Intelligent Systems and Technology (TIST)}, 2023. [\href{https://dl.acm.org/doi/abs/10.1145/3604808}{Paper}][\RED{IF=7.2}]
     \item Hwangyong Choi, \textbf{Jeongwhan Choi}, Jeehyun Hwang, Kookjin Lee, Dongeun Lee and Noseong Park, ``Climate Modeling with Neural Advection-Diffusion Equation'', \emph{Knowledge and Information Systems}, Jan. 2023. [\href{https://doi.org/10.1007/s10115-023-01829-2}{Paper}] [\RED{IF=3.205(2021) Five year impact factor}]
     \item \textbu{Jeongwhan Choi} and Duksan Ryu, ``Bayesian Optimization Framework for Improved Cross-Version Defect Prediction'', \emph{KIPS Transactions on Software and Data Engineering (KTSDE)}, Vol. 10, No. 9, pp. 339-348, Sep. 2021.
     \item \textbu{Jeongwhan Choi}, Jiwon Choi, Duksan Ryu and Suntae Kim, ``Improved Prediction for Configuration Bug Report Using Text Mining and Dimensionality Reduction'', \emph{Journal of KIISE}, 2021, Vol. 48, No. 1, pp. 35-42.
@@ -328,8 +334,6 @@
 \end{enumerate}
 
 \vspace{1em}
-\clearpage
-
 \textsc{Abstracts and Contributions to Peer-reviewed Workshops}
 \lineover
 \begin{enumerate}
@@ -352,38 +356,44 @@
 \end{body}
 
 \medskip
-% \pagebreak
-%%%% Honors & Awards %%%%
-
-\header{Awards \& Scholarships}
+\pagebreak
+%%%% Awards & Honors %%%%
+\header{Awards \& Honors}
 \begin{body}
 	\vspace{14pt}
-\award{\href{https://icml.cc/Conferences/2026/ProgramCommittee\#gold}{Gold Reviewer Award}, ICML 2026.} {May 2026}
-\award{Jang Young Sil Fellow Program (Excellence Track), KAIST. (60M KRW for one year)}{Mar 2026}
-\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=464785&article.offset=0&articleLimit=10}{Merit Academic Paper Award}, Yonsei University} {Feb 2026} 
-\award{\href{https://www.jeongwhanchoi.com/assets/award/KAIST-SAMSUNG-BESTPAPER-RUNNERUP.pdf}{Best Paper Runner-up Award} (3M KRW), KAIST-Samsung Industry-Academic Collaboration}{Nov 2025}
-\award{\href{https://kdd2025.kdd.org/research-track-program-committee/\#february_cycle}{Outstanding Reviewer (Top 10\%)}, KDD 2025 (February Cycle).} {Jun 2025}
-\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=220032&article.offset=0&articleLimit=10}{Merit Academic Paper Award}, Yonsei University} {Feb 2025} 
-\award{\href{https://kdd2025.kdd.org/research-track-program-committee/\#august_cycle}{Outstanding Reviewer (Top 10\%)}, KDD 2025 (August Cycle).} {Dec 2024}
-\award{\href{https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-south-korea}{Qualcomm Innovation Fellowship Winner}, Qualcomm Technologies Inc. (4M KRW, approx. 2.8K USD)} {Dec 2024} 
-\award{\href{https://x.com/LogConference/status/1862602407395697123}{Top Reviewer Award}, LoG 2024.} {Nov 2024}
-\award{\href{https://neurips.cc/Conferences/2024/ProgramCommittee\#top-reviewers}{Top Reviewer Award}, NeurIPS 2024.} {Nov 2024}
-\award{\href{https://drive.google.com/file/d/1--cUGRX6rB9rc2phbMeIJ7BdHRNCj_au/view?usp=sharing}{First Prize of Idea Competition}, Korea Financial Telecommunications \& Clearing Institute.} {Oct 2024}
-\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=208151&article.offset=0&articleLimit=10}{Merit Academic Paper Award}, Yonsei University} {Jul 2024} 
-\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=181558&article.offset=0&articleLimit=10}{Best Paper Award}, Yonsei University (Best paper in Dept. of Artificial Intelligence) } {Jan 2024} 
+\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=464785}{Merit Academic Paper Award}, Yonsei University}{Feb 2026}
+\award{\href{https://www.jeongwhanchoi.com/assets/award/KAIST-SAMSUNG-BESTPAPER-RUNNERUP.pdf}{Best Paper Runner-up Award} (3M KRW), KAIST--Samsung Industry-Academic Collaboration}{Nov 2025}
+\award{\href{https://kdd2025.kdd.org/research-track-program-committee/\#february_cycle}{Outstanding Reviewer (Top 10\%)}, KDD 2025 (February Cycle)}{Jun 2025}
+\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=220032}{Merit Academic Paper Award}, Yonsei University}{Feb 2025}
+\award{\href{https://kdd2025.kdd.org/research-track-program-committee/\#august_cycle}{Outstanding Reviewer (Top 10\%)}, KDD 2025 (August Cycle)}{Dec 2024}
+\award{\href{https://www.qualcomm.com/research/university-relations/innovation-fellowship/2024-south-korea}{Qualcomm Innovation Fellowship Winner}, Qualcomm Technologies Inc.\ (4M KRW)}{Dec 2024}
+\award{\href{https://x.com/LogConference/status/1862602407395697123}{Top Reviewer Award}, LoG 2024}{Nov 2024}
+\award{\href{https://neurips.cc/Conferences/2024/ProgramCommittee\#top-reviewers}{Top Reviewer Award (Top 8\%)}, NeurIPS 2024}{Nov 2024}
+\award{\href{https://drive.google.com/file/d/1--cUGRX6rB9rc2phbMeIJ7BdHRNCj_au/view?usp=sharing}{First Prize, Business Idea Competition}, Korea Financial Telecommunications \& Clearing Institute}{Oct 2024}
+\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=208151}{Merit Academic Paper Award}, Yonsei University}{Jul 2024}
+\award{\href{https://graduate.yonsei.ac.kr/graduate/board/news.do?mode=view&articleNo=181558}{Best Paper Award} (Best paper in Dept.\ of Artificial Intelligence), Yonsei University}{Jan 2024}
+\award{Excellent Academic Paper Award, Yonsei University}{Jul 2022}
+\award{Best Paper Award, Korea Conference on Software Engineering (KCSE 2021)}{Feb 2021}
+\award{Best Paper Award, Dept.\ of Software Engineering, Jeonbuk National University}{Dec 2019}
+\award{Best Paper Award, Korean Institute of Information Technology}{Jun 2019}
+\end{body}
+ 
+\medskip
+ 
+%%%% Fellowships & Scholarships %%%%
+\header{Fellowships \& Scholarships}
+\begin{body}
+	\vspace{14pt}
+\award{\href{https://research.kaist.ac.kr}{Jang Young Sil Fellow Program (Excellence Track)}, KAIST (30M KRW for one year)}{Mar 2026}
 \award{Graduate Student Research Assistantship (GSRA) Scholarship, Yonsei University}{May 2023}
 \award{Academic Research Fellowship (ARF), Brain Korea 21 (BK21) Program, Yonsei University}{Jan 2023}
 \award{Graduate Student Research Assistantship (GSRA) Scholarship, Yonsei University}{Nov 2022}
 \award{Academic Research Fellowship (ARF), Brain Korea 21 (BK21) Program, Yonsei University}{Sep 2022}
-\award{\href{https://www.yonsei.ac.kr/ocx/news.jsp?mode=view&ar_seq=20220708141917269049&sr_volume=632&list_mode=list&sr_site=S&pager.offset=0&sr_cates=29}{Excellent Academic Paper Award}, Yonsei University}{Jul 2022}
 \award{Graduate Student Research Assistantship (GSRA) Scholarship, Yonsei University}{Apr 2022}
-\award{Best Paper Awards in the 23rd Korea Conference on Software Engineering (KCSE 2021)}{Feb 2021}
+\award{\href{https://www.jeongwhanchoi.com/assets/award/national_scholar.pdf}{The National Scholarship for Science and Engineering}, Ministry of Science and ICT}{2018--2019}
+\award{Academic Excellence Award (성적우수상), Jeonbuk National University}{2017}
+\award{Presidential Academic Excellence Award (성적우수 총장상), Jeonbuk National University}{2016}
 \award{Presidential Award for Outstanding Undergraduate, Jeonbuk National University}{Dec 2019}
-\award{Best Paper Awards in Dept. of Software Engineering, Jeonbuk National University}{Dec 2019}
-\award{Best Paper Awards, Korean Institute of Information Technology}{Jun 2019}
-\award{\href{https://www.jeongwhanchoi.com/assets/award/national_scholar.pdf}{The National Scholarship for Science and Engineering}, Ministry of Science and ICT (과학기술정보통신부)}{2018-2019}
-\award{Academic Excellence Award (성적우수상), Jeonbuk National University} {2017}
-\award{Presidential Academic Excellence Award (성적우수 총장상), Jeonbuk National University} {2016}
 \end{body}
 
 \medskip
@@ -560,8 +570,8 @@
         \item Noseong Park  (noseong@kaist.ac.kr)
         \item Sung-Bae Cho  (sbcho@yonsei.ac.kr)
         \item Kookjin Lee  (kookjin.lee@asu.edu)
-        \item Duksan Ryu (duksan.ryu@jbnu.ac.kr)
-        \item Suntae Kim (stkim@jbnu.ac.kr)
+        % \item Duksan Ryu (duksan.ryu@jbnu.ac.kr)
+        % \item Suntae Kim (stkim@jbnu.ac.kr)
     \end{itemize}
 \end{body}
 

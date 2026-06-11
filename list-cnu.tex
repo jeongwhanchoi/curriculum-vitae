@@ -1,0 +1,345 @@
+% !TEX program = xelatex
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ulem}
+
+
+\geometry{top=2cm, bottom=1.8cm, left=1.2cm, right=1.2cm}
+
+\setmainfont{NanumGothic}
+\setCJKmainfont{NanumGothic}
+
+\definecolor{sectionblue}{RGB}{0, 70, 140}
+\definecolor{accentred}{RGB}{180, 0, 0}
+\definecolor{gray60}{RGB}{90, 90, 90}
+\definecolor{titlegray}{RGB}{30, 30, 30}
+\definecolor{rowbg}{RGB}{245, 247, 252}
+
+\hypersetup{colorlinks=true, urlcolor=sectionblue}
+
+\titleformat{\section}{\bfseries}{}{0em}{}[\color{sectionblue}\hrule]
+\titleformat{\subsection}{\normalsize\bfseries\color{gray60}}{}{0em}{}
+
+\newcommand{\me}[1]{\textbf{\underline{#1}}}
+\newcommand{\oral}{\textcolor{accentred}{\textbf{[Oral Presentation]}}}
+\newcommand{\best}{\textcolor{accentred}{\textbf{[Best Paper]}}}
+\newcommand{\rtag}[1]{\textcolor{accentred}{[#1]}}
+
+\newcommand\hl{\bgroup\markoverwith{\textcolor{lightgray}{\rule[-.5ex]{.1pt}{2.5ex}}}\ULon}
+% 4-line paper entry
+% #1: number label  #2: title  #3: authors  #4: venue  #5: notes (empty = none)
+\newcommand{\paper}[5]{%
+  \noindent
+  \begin{minipage}{\linewidth}
+  % \vspace{4pt}
+  {\small\textbf{\color{gray60}#1}}\quad{\normalsize\textbf{\color{titlegray}#2}}\\
+  \hspace*{1.6em}{\small #3}\\
+  \hspace*{1.6em}{\small\textit{#4}}\\
+  \ifx&#5&%
+  \else
+  \hspace*{1.6em}{\small #5}\\[1pt]
+  \fi
+  \end{minipage}%
+  % \vspace{2pt}
+  % \hrule height 0.2pt \relax
+  % \vspace{4pt}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 최근 5년간\; 연구 실적\; 목록}\\[4pt]
+  {\normalsize\color{gray60} 최정환 (Jeongwhan Choi) \quad|\quad 2021--2026}\\[2pt]
+  {\small\color{gray60} * 공동 제1저자 (equal contribution)} \\
+  {\hl{하이라이트}: 심사대상 400\% 포함 논문}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conference Papers}
+\subsection{2026}
+
+\paper{C1}
+  {Learning Posterior Predictive Distributions for Node Classification from Synthetic Graph Priors}
+  {\me{Jeongwhan Choi}*, Jongwoo Kim*, Woosung Kang, Noseong Park}
+  {International Conference on Learning Representations (ICLR), 2026}
+  {}
+
+\paper{C2}
+  {\hl{Are Graph Transformers Necessary? Efficient Long-Range Message Passing with Fractal Nodes in MPNNs}}
+  {\me{Jeongwhan Choi}, Seungjun Park, Sumin Park, Sung-Bae Cho, Noseong Park}
+  {AAAI Conference on Artificial Intelligence (AAAI), 2026}
+  {\oral{} \quad Acceptance Rate: 17.6\% (4,167/23,680)}
+
+\subsection{2025}
+
+\paper{C3}
+  {FraudCenGCL: Role-Aware Graph Contrastive Learning for Low-Homophily Fraud Detection}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Jaehoon Lee*}
+  {IEEE International Conference on Big Data (Big Data), 2025}
+  {}
+
+\paper{C4}
+  {TV-Rec: Time-Variant Convolutional Filter for Sequential Recommendation}
+  {Yehjin Shin, \me{Jeongwhan Choi}, Seojin Kim, Noseong Park}
+  {Conference on Neural Information Processing Systems (NeurIPS), 2025}
+  {Acceptance Rate: 25.52\% (5,290/21,575)}
+
+\paper{C5}
+  {Learning Advanced Self-Attention for Linear Transformers in the Singular Value Domain}
+  {Hyowon Wi, \me{Jeongwhan Choi}, Noseong Park}
+  {International Joint Conference on Artificial Intelligence (IJCAI), 2025}
+  {Acceptance Rate: 19.3\% (1,042/5,404)}
+
+\paper{C6}
+  {PIORF: Physics-Informed Ollivier-Ricci Flow for Long-Range Interactions in Mesh Graph Neural Networks}
+  {Youn-Yeol Yu*, \me{Jeongwhan Choi}*, Jaehyeon Park, Kookjin Lee, Noseong Park}
+  {International Conference on Learning Representations (ICLR), 2025}
+  {Acceptance Rate: 32.08\%}
+
+\paper{C7}
+  {FrAug: Enhanced Fraud Detection in Interbank Transfers via Augmented Account Features}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Jaehoon Lee, Noseong Park}
+  {IEEE BigComp, 2025}
+  {}
+
+\paper{C8}
+  {SCONE: A Novel Stochastic Sampling to Generate Contrastive Views and Hard Negative Samples for Recommendation}
+  {Chaejeong Lee*, \me{Jeongwhan Choi}*, Hyowon Wi, Sung-Bae Cho, Noseong Park}
+  {ACM International Conference on Web Search and Data Mining (WSDM), 2025}
+  {Acceptance Rate: 17.3\% (106/615)}
+
+\subsection{2024}
+
+\paper{C9}
+  {\hl{Graph Convolutions Enrich the Self-Attention in Transformers!}}
+  {\me{Jeongwhan Choi}*, Hyowon Wi*, Jayoung Kim, Yehjin Shin, Kookjin Lee, Nathaniel Trask, Noseong Park}
+  {Conference on Neural Information Processing Systems (NeurIPS), 2024}
+  {Acceptance Rate: 25.8\%}
+
+\paper{C10}
+  {Bridging Dynamic Factor Models and Neural Controlled Differential Equations for Nowcasting GDP}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Sang-Ha Yoon, Shinhyuck Kang, Young-Min Kim, Hyunjoong Kang}
+  {ACM International Conference on Information and Knowledge Management (CIKM), 2024}
+  {Applied Research Paper Acceptance Rate: 32.59\% (103/316)}
+
+\paper{C11}
+  {\hl{PANDA: Expanded Width-Aware Message Passing Beyond Rewiring}}
+  {\me{Jeongwhan Choi}, Sumin Park, Hyowon Wi, Sung-Bae Cho, Noseong Park}
+  {International Conference on Machine Learning (ICML), 2024}
+  {Acceptance Rate: 27.5\% (2,610/9,473)}
+
+\paper{C12}
+  {Polynomial-based Self-Attention for Table Representation Learning}
+  {Jayoung Kim, Yehjin Shin, \me{Jeongwhan Choi}, Hyowon Wi, Noseong Park}
+  {International Conference on Machine Learning (ICML), 2024}
+  {Acceptance Rate: 27.5\% (2,610/9,473)}
+
+\paper{C13}
+  {SVD-AE: Simple Autoencoders for Collaborative Filtering}
+  {Seoyoung Hong, \me{Jeongwhan Choi}, Yeon-Chang Lee, Srijan Kumar, Noseong Park}
+  {International Joint Conference on Artificial Intelligence (IJCAI), 2024}
+  {Acceptance Rate: 14.00\% (791/5,651)}
+
+\paper{C14}
+  {Learning Flexible Body Collision Dynamics with Hierarchical Contact Mesh Transformer}
+  {Youn-Yeol Yu, \me{Jeongwhan Choi}, Woojin Cho, Kookjin Lee, Nayong Kim, Kiseok Chang, ChangSeung Woo, Ilho Kim, SeokWoo Lee, Joon Young Yang, Sooyoung Yoon, Noseong Park}
+  {International Conference on Learning Representations (ICLR), 2024}
+  {Acceptance Rate: 30.81\% (2,250/7,304)}
+
+\paper{C15}
+  {An Attentive Inductive Bias for Sequential Recommendation beyond the Self-Attention}
+  {Yehjin Shin*, \me{Jeongwhan Choi}*, Hyowon Wi, Noseong Park}
+  {AAAI Conference on Artificial Intelligence (AAAI), 2024}
+  {Acceptance Rate: 23.75\% (2,342/12,100)}
+
+\subsection{2023}
+
+\paper{C16}
+  {Long-term Time Series Forecasting based on Decomposition and Neural Ordinary Differential Equations}
+  {Seonkyu Lim, Jaehyeon Park, Seojin Kim, Hyowon Wi, Haksoo Lim, Jinsung Jeon, \me{Jeongwhan Choi}, Noseong Park}
+  {IEEE International Conference on Big Data (Big Data), 2023}
+  {}
+
+\paper{C17}
+  {QoS-Aware Graph Contrastive Learning for Web Service Recommendation}
+  {\me{Jeongwhan Choi}, Duksan Ryu}
+  {Asia-Pacific Software Engineering Conference (APSEC), 2023}
+  {}
+
+\paper{C18}
+  {\hl{GREAD: Graph Reaction-Diffusion Networks}}
+  {\me{Jeongwhan Choi}, Seoyoung Hong, Noseong Park, Sung-Bae Cho}
+  {International Conference on Machine Learning (ICML), 2023}
+  {Acceptance Rate: 27.94\% (1,827/6,538)}
+
+\paper{C19}
+  {\hl{Blurring-Sharpening Process Models for Collaborative Filtering}}
+  {\me{Jeongwhan Choi}, Seoyoung Hong, Noseong Park, Sung-Bae Cho}
+  {ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR), 2023}
+  {Acceptance Rate: 20.1\% (165/822)}
+
+\paper{C20}
+  {Graph Convolution-based Collaborative Filtering for Web Service QoS Ranking}
+  {\me{Jeongwhan Choi}, Duksan Ryu}
+  {Korea Conference on Software Engineering (KCSE), 2023}
+  {}
+
+\subsection{2022}
+
+\paper{C21}
+  {Prediction-based One-shot Dynamic Parking Pricing}
+  {Seoyoung Hong, Heejoo Shin, \me{Jeongwhan Choi}, Noseong Park}
+  {ACM International Conference on Information and Knowledge Management (CIKM), 2022}
+  {}
+
+\paper{C22}
+  {Graph Neural Controlled Differential Equations for Traffic Forecasting}
+  {\me{Jeongwhan Choi}, Hwangyong Choi, Jeehyun Hwang, Noseong Park}
+  {AAAI Conference on Artificial Intelligence (AAAI), 2022}
+  {\oral{} \quad Acceptance Rate: 15.2\% (1,370/9,020)}
+
+\paper{C23}
+  {Linear, or Non-Linear, That is the Question!}
+  {Taeyong Kong, Taeri Kim, Jinsung Jeon, \me{Jeongwhan Choi}, Yeon-Chang Lee, Noseong Park, Sang-Wook Kim}
+  {ACM International Conference on Web Search and Data Mining (WSDM), 2022}
+  {Regular Paper Acceptance Rate: 15.8\% (80/505)}
+
+\subsection{2021}
+
+\paper{C24}
+  {Self-Supervised Learning Using Feature Subsets of Software Defect Data}
+  {\me{Jeongwhan Choi}, Duksan Ryu}
+  {Korea Software Congress (KSC), 2021}
+  {}
+
+\paper{C25}
+  {Climate Modeling with Neural Diffusion Equations}
+  {Jeehyun Hwang, \me{Jeongwhan Choi}, Hwangyong Choi, Kookjin Lee, Dongeun Lee, Noseong Park}
+  {IEEE International Conference on Data Mining (ICDM), 2021}
+  {Regular Paper Acceptance Rate: 9.9\% (98/990)}
+
+\paper{C26}
+  {LT-OCF: Learnable-Time ODE-based Collaborative Filtering}
+  {\me{Jeongwhan Choi}, Jinsung Jeon, Noseong Park}
+  {ACM International Conference on Information and Knowledge Management (CIKM), 2021}
+  {Regular Paper Acceptance Rate: 21.7\% (271/1,251)}
+
+\paper{C27}
+  {Bayesian Optimization Framework for Cross-Version Defect Prediction}
+  {\me{Jeongwhan Choi}, Duksan Ryu}
+  {Korea Conference on Software Engineering (KCSE), 2021}
+  {\best{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Journal Papers}
+
+\paper{J1}
+  {\hl{Predicting Drug-Drug Interactions: A Deep Learning Approach with GCN-Based Collaborative Filtering}}
+  {Yeon Uk Jeong, \me{Jeongwhan Choi}, Noseong Park, Jae Yong Ryu, Yi Rang Kim}
+  {Artificial Intelligence in Medicine, 2025}
+  {\rtag{IF=6.1}}
+
+\paper{J2}
+  {Graph-Based Representation Approach for Deep Learning of Organic Light-Emitting Diode Devices}
+  {Taeyang Lee, \me{Jeongwhan Choi}, Inyeob Na, Insun Yoo, Sungil Woo, Kwang Jong Kim, Mikyung Park, Joonghwan Yang, Jeongguk Min, Seokwoo Lee, Noseong Park, Joonyoung Yang}
+  {Advanced Intelligent Systems, 2024}
+  {\rtag{IF=6.2}}
+
+\paper{J3}
+  {Graph Neural Rough Differential Equations for Traffic Forecasting}
+  {\me{Jeongwhan Choi}, Noseong Park}
+  {ACM Transactions on Intelligent Systems and Technology (TIST), 2023}
+  {\rtag{IF=7.2}}
+
+\paper{J4}
+  {Climate Modeling with Neural Advection-Diffusion Equation}
+  {Hwangyong Choi, \me{Jeongwhan Choi}, Jeehyun Hwang, Kookjin Lee, Dongeun Lee, Noseong Park}
+  {Knowledge and Information Systems, 2023}
+  {\rtag{IF=3.205}}
+
+\paper{J5}
+  {Bayesian Optimization Framework for Improved Cross-Version Defect Prediction}
+  {\me{Jeongwhan Choi}, Duksan Ryu}
+  {KIPS Transactions on Software and Data Engineering (KTSDE), Vol.~10, No.~9, 2021}
+  {}
+
+\paper{J6}
+  {Improved Prediction for Configuration Bug Report Using Text Mining and Dimensionality Reduction}
+  {\me{Jeongwhan Choi}, Jiwon Choi, Duksan Ryu, Suntae Kim}
+  {Journal of KIISE, Vol.~48, No.~1, pp.~35--42, 2021}
+  {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Workshop Papers}
+
+\paper{W1}
+  {Possibility for Proactive Anomaly Detection}
+  {Jinsung Jeon, Jaehyeon Park, Sewon Park, \me{Jeongwhan Choi}, Minjung Kim, Noseong Park}
+  {ICBINB Workshop @ ICLR, 2025}
+  {}
+
+\paper{W2}
+  {FraudCenGCL: Enhancing Fraud Detection via Dual-View Graph Contrastive Learning with Account Centrality Features}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Noseong Park}
+  {Social Impact Workshop @ AAAI, 2025}
+  {}
+
+\paper{W3}
+  {FrAug: Enhanced Fraud Detection in Interbank Transfers via Augmented Account Features}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Jaehoon Lee, Noseong Park}
+  {AI4TS Workshop @ AAAI, 2025}
+  {}
+
+\paper{W4}
+  {Enhanced Fraud Detection in Bank Transfers via Augmented Account Features}
+  {Seonkyu Lim*, \me{Jeongwhan Choi}*, Jaehoon Lee, Noseong Park}
+  {FM4TS Workshop @ ICAIF, 2024}
+  {}
+
+\paper{W5}
+  {HyperNetwork Approximating Future Parameters for Time Series Forecasting under Temporal Drifts}
+  {Jaehoon Lee, Chan Kim, Gyumin Lee, Haksoo Lim, \me{Jeongwhan Choi}, Kookjin Lee, Dongeun Lee, Sanghyun Hong, Noseong Park}
+  {DistShift Workshop @ NeurIPS, 2023}
+  {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Preprints}
+
+\paper{P1}
+  {Can TabPFN Compete with GNNs for Node Classification via Graph Tabularization?}
+  {\me{Jeongwhan Choi}, Woosung Kang, Minseo Kim, Jongwoo Kim, Noseong Park}
+  {arXiv:2512.08798, 2025}
+  {}
+
+\paper{P2}
+  {Graph Signal Processing for Cross-Domain Recommendation}
+  {Jeongeun Lee, Seongku Kang, Won-Yong Shin, \me{Jeongwhan Choi}, Noseong Park, Dongha Lee}
+  {arXiv:2407.12374}
+  {}
+
+\paper{P3}
+  {RDGCL: Reaction-Diffusion Graph Contrastive Learning for Recommendation}
+  {\me{Jeongwhan Choi}*, Hyowon Wi*, Chaejeong Lee, Sung-Bae Cho, Dongha Lee, Noseong Park}
+  {arXiv:2312.16563, 2023}
+  {}
+
+\paper{P4}
+  {Time Series Forecasting with Hypernetworks Generating Parameters in Advance}
+  {Jaehoon Lee, Chan Kim, Gyumin Lee, Haksoo Lim, \me{Jeongwhan Choi}, Kookjin Lee, Dongeun Lee, Sanghyun Hong, Noseong Park}
+  {arXiv:2211.12034, 2022}
+  {}
+
+\end{document}

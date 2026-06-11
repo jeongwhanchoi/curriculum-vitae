@@ -1,0 +1,90 @@
+% !TEX program = xelatex
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec}
+% \usepackage[cjk]{kotex}
+\usepackage[space]{xeCJK}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ulem}
+
+\geometry{top=2cm, bottom=1.8cm, left=1.2cm, right=1.2cm}
+
+\setmainfont{NanumGothic}
+\setCJKsansfont{NanumGothic}
+\setCJKsansfont{Noto Sans CJK KR}
+\setCJKsansfont{Noto Sans CJK JP}
+\usepackage[utf8]{inputenc}
+
+\definecolor{sectionblue}{RGB}{0, 70, 140}
+\definecolor{accentred}{RGB}{180, 0, 0}
+\definecolor{gray60}{RGB}{90, 90, 90}
+\definecolor{titlegray}{RGB}{30, 30, 30}
+\definecolor{rowbg}{RGB}{245, 247, 252}
+
+\hypersetup{colorlinks=true, urlcolor=sectionblue}
+
+\titleformat{\section}{\bfseries}{}{0em}{}[\color{sectionblue}\hrule]
+\titleformat{\subsection}{\normalsize\bfseries\color{gray60}}{}{0em}{}
+
+\newcommand{\me}[1]{\textbf{\underline{#1}}}
+\newcommand{\oral}{\textcolor{accentred}{\textbf{[Oral Presentation]}}}
+\newcommand{\best}{\textcolor{accentred}{\textbf{[Best Paper]}}}
+\newcommand{\rtag}[1]{\textcolor{accentred}{[#1]}}
+
+\newcommand\hl{\bgroup\markoverwith{\textcolor{lightgray}{\rule[-.5ex]{.1pt}{2.5ex}}}\ULon}
+% 4-line paper entry
+% #1: number label  #2: title  #3: authors  #4: venue  #5: notes (empty = none)
+\newcommand{\paper}[5]{%
+  \noindent
+  \begin{minipage}{\linewidth}
+  % \vspace{4pt}
+  {\small\textbf{\color{gray60}#1}}\quad{\normalsize\textbf{\color{titlegray}#2}}\\
+  \hspace*{1.6em}{\small #3}\\
+  \hspace*{1.6em}{\small\textit{#4}}\\
+  \ifx&#5&%
+  \else
+  \hspace*{1.6em}{\small #5}\\[1pt]
+  \fi
+  \end{minipage}%
+  % \vspace{2pt}
+  % \hrule height 0.2pt \relax
+  % \vspace{4pt}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 추천인 목록}\\[4pt]
+\end{center}
+\vspace{1em}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paper{1}
+  {박노성}
+  {한국과학기술원, 전산학부, 부교수}
+  {noseong@kaist.ac.kr}
+  {}
+
+\paper{2}
+  {조성배}
+  {연세대학교, 컴퓨터과학과, 교수}
+  {sbcho@yonsei.ac.kr}
+  {}
+
+\paper{3}
+  {Kookjin Lee}
+  {Arizona State University, School of Computing and Augmented Intelligence, Assistant Professor }
+  {kookjin.lee@asu.edu}
+  {}
+
+\end{document}
